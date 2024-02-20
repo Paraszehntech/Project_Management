@@ -1,0 +1,31 @@
+<div class="row clearfix">
+    <%if task.completed? %>
+        <div class="complete">
+            <%= link_to complete_project_task_path(@project, task.id),data: {turbo_method: 'patch', turbo_confirm: "Are you sure"} do%>
+            <i style="opacity:0.4;" class="fa-solid fa-check"></i>
+            <% end %>
+        </div>
+        <div class="todo_item">
+            <p style="opacity:0.4"><strike><%= task.content %></strike></p>
+        </div>
+        <div class="trash">
+            <%= link_to project_task_path(@project, task.id),data: {turbo_method: 'delete', turbo_confirm: "Are you sure"} do%>
+            <i class="fa-solid fa-trash"></i>
+            <% end %>
+        </div>
+    <% else %>
+        <div class="complete">
+            <%= link_to complete_project_task_path(@project, task.id),data: {turbo_method: 'patch', turbo_confirm: "Are you sure"} do %>
+            <i class="fa-solid fa-check"></i>
+            <% end %>
+        </div>
+        <div class="todo_item">
+            <p><%= task.content %></p>
+        </div>
+        <div class="trash">
+            <%= link_to project_task_path(@project, task.id),data: {turbo_method: 'delete', turbo_confirm: "Are you sure"} do %>
+            <i class="fa-solid fa-trash"></i>
+            <% end %>
+        </div>
+    <% end %>
+  </div>

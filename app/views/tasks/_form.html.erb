@@ -1,0 +1,7 @@
+<%= form_for([@project, @project.tasks.build]) do |f| %>
+<div class="mb-3">
+    <%= f.label :"Task :",class:"form-label"%>
+    <%= f.text_area :content,placeholder:"New Task",required:true,class:"form-control"%>
+</div>
+<%= f.submit "Add Task"%>
+<% end %>
