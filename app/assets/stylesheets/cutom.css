@@ -6,12 +6,15 @@ html {
 }
 
 body {
- 	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh; /* Set minimum height to viewport height */
+	display: flex;
+	flex-direction: column;
   background: #eeeeff;
   font-family: 'Merriweather', serif;
-  background: #70e1f5;
-  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  
-  background: linear-gradient(to right, #ffd194, #70e1f5);
+  background-color: white !important;
+ 
 }
 
 .clearfix:before,
@@ -32,11 +35,11 @@ body {
 }
 
 .container {
-	width: 200%;
-	max-width: 1200px;
-	background: #70e1f5;
-  background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  
-  background: linear-gradient(to right, #ffd194, #70e1f5);
+	
+	width: 50%;
+	max-width: 1000px;
+	background-color: lightgray;
+ 
 	margin: 3em auto 0 auto;
 	border-radius: 0px;
 	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.7);
@@ -46,7 +49,7 @@ body {
 .todo_list_title {
 	text-align: center;
 	font-weight: 700;
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	text-transform: uppercase;
 	color: black;
 	margin: 0;
@@ -63,9 +66,10 @@ body {
 .todo_list_sub_title {
 	margin: 0 0 0 0;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	color: black;
 	font-weight: 100;
+	text-align: justify;
 }
 
 .index_row {
@@ -198,3 +202,51 @@ input[type="submit"] {
 	}
 }
 ::-webkit-input-placeholder { color: #eeefef; }
+footer {
+    position: fixed; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    width: 50%; 
+    background: -webkit-linear-gradient(to right, #333333, #f5f5f5);
+    color: white; 
+    padding: 20px;
+    text-align: center; 
+    margin: 0 auto; 
+}
+
+footer a {
+    color: white; 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+footer {
+    position: fixed; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: lightsteelblue;
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    margin: 0 auto; 
+}
+
+footer a {
+  color: white;
+  text-decoration: none; 
+}
+
+footer a:hover {
+  text-decoration: underline; 
+}
+header{
+   
+    background-color:lightsteelblue;
+    color: #333333; 
+	font-weight: bold;
+  }
